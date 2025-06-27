@@ -1,120 +1,114 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Technology | Decentralized Technology Services</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Orbitron', sans-serif;
-      background: #010a1c;
-      color: #a4caff;
-      margin: 0;
-      padding: 0 3rem 3rem;
+      background: linear-gradient(135deg, #0a132f, #1f2a47);
+      color: #a0cfff;
       min-height: 100vh;
       overflow-x: hidden;
+      position: relative;
     }
     header {
       position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(1, 10, 28, 0.95);
-      backdrop-filter: saturate(200%) blur(10px);
-      z-index: 100;
+      top: 0; left: 0; right: 0;
+      background: rgba(10, 19, 47, 0.95);
+      border-bottom: 1px solid #1488fa;
+      backdrop-filter: blur(10px);
       padding: 1rem 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #0d47a1;
+      z-index: 1000;
     }
     header h1 {
-      font-size: 1.9rem;
-      color: #3bd1ff;
-      letter-spacing: 0.15em;
+      color: #00baff;
+      font-size: 2.4rem;
+      letter-spacing: 0.3em;
       user-select: none;
-      text-shadow:
-        0 0 8px #3bd1ff,
-        0 0 15px #3bd1ff;
+      text-shadow: 0 0 14px #00baffaa;
     }
     nav a {
       margin-left: 2rem;
-      font-size: 1.05rem;
-      color: #78baff;
+      color: #7fbfff;
       font-weight: 600;
-      position: relative;
+      font-size: 1.05rem;
       text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
     }
-    nav a:hover {
-      color: #3bd1ff;
-      text-shadow: 0 0 12px #3bd1ff;
+    nav a:hover,
+    nav a.active {
+      color: #00baff;
+      text-shadow: 0 0 15px #00baff;
     }
     main {
-      padding-top: 100px;
+      padding: 120px 3rem 4rem;
       max-width: 900px;
       margin: 0 auto;
     }
     h2 {
       font-size: 2.9rem;
+      color: #00baff;
+      text-shadow: 0 0 18px #00baffaa;
       margin-bottom: 1.3rem;
-      color: #5bd8ff;
-      text-shadow: 0 0 12px #3bd1ff;
-    }
-    p.lead {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      max-width: 650px;
-      line-height: 1.5;
-      color: #a8cfff;
-      text-shadow: 0 0 6px #3bd1ff;
-    }
-    .tech-list {
-      list-style-type: none;
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-    .tech-item {
-      background: #011026;
-      border-radius: 16px;
-      box-shadow:
-        0 0 12px #3bd1ffaa,
-        inset 0 0 20px #3bd1ff44;
-      padding: 2rem;
-      color: #b8dfff;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      cursor: default;
-    }
-    .tech-item:hover {
-      box-shadow:
-        0 0 28px #00f9ffdd,
-        inset 0 0 25px #00f9ffaa;
-      transform: scale(1.06);
-    }
-    .tech-item h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.6rem;
-      color: #00f9ff;
-      text-shadow: 0 0 14px #00f9ff;
-    }
-    .tech-item p {
-      line-height: 1.45;
-      font-weight: 500;
-      color: #b6dbffcc;
-    }
-    footer {
-      padding: 2rem;
       text-align: center;
-      color: #446699;
-      font-size: 0.85rem;
-      user-select: none;
-      background: #010a1c;
-      border-top: 1px solid #0d47a1;
-      margin-top: 3rem;
+    }
+    p {
+      font-weight: 500;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #a9ccffdd;
+      margin-bottom: 1.6rem;
+      text-align: justify;
+    }
+    ul.tech-list {
+      list-style: none;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      color: #88bbffcc;
+    }
+    ul.tech-list li {
+      margin-bottom: 1rem;
+      padding-left: 1.3rem;
+      position: relative;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    ul.tech-list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #00baff;
+      text-shadow: 0 0 12px #00baffaa;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+    /* Animations */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUpIn 1s forwards;
+    }
+    .fade-in-up.delay-1 {
+      animation-delay: 0.3s;
+    }
+    .fade-in-up.delay-2 {
+      animation-delay: 0.6s;
+    }
+    .fade-in-up.delay-3 {
+      animation-delay: 0.9s;
+    }
+    @keyframes fadeUpIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -124,79 +118,34 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="technology.html" style="text-shadow: 0 0 20px #3bd1ff;">Technology</a>
+      <a href="technology.html" class="active">Technology</a>
       <a href="use-cases.html">Use Cases</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
-    <h2>Our Technology</h2>
-    <p class="lead">
-      At DTS, we utilize a fusion of cutting-edge technologies to build decentralized AI gateways that guarantee privacy, scalability, and interoperability.
+    <h2 class="fade-in-up">Our Technology</h2>
+    <p class="fade-in-up delay-1">
+      At Decentralized Technology Services, our foundation is built on a revolutionary AI integration framework that guarantees security, privacy, and scalability.  
+      We operate a decentralized API gateway that connects to multiple secure AI data centers worldwide, preventing any single point of failure or data breach risk.
     </p>
-    <ul class="tech-list">
-      <li class="tech-item" data-index="0">
-        <h3>Zero-Knowledge Proofs (ZKP)</h3>
-        <p>Enable secure, private verification of transactions and data without revealing underlying information — the backbone of our privacy model.</p>
-      </li>
-      <li class="tech-item" data-index="1">
-        <h3>Decentralized Infrastructure</h3>
-        <p>Leveraging blockchain and distributed computing, our architecture avoids single points of failure and enhances data sovereignty.</p>
-      </li>
-      <li class="tech-item" data-index="2">
-        <h3>AI Abstraction Layer</h3>
-        <p>Abstracts complex AI APIs into a unified gateway, allowing seamless integration with any AI platform, current or future.</p>
-      </li>
-      <li class="tech-item" data-index="3">
-        <h3>Real-Time Monitoring & Analytics</h3>
-        <p>Advanced dashboards and AI-powered insights enable proactive compliance and performance tuning.</p>
-      </li>
-      <li class="tech-item" data-index="4">
-        <h3>End-to-End Encryption</h3>
-        <p>All data routed through our services is encrypted from client to AI endpoint, ensuring zero data leakage.</p>
-      </li>
-      <li class="tech-item" data-index="5">
-        <h3>AI & Blockchain Synergy</h3>
-        <p>Innovative use of blockchain for auditability and decentralized consensus integrated tightly with AI processing workflows.</p>
-      </li>
+    <p class="fade-in-up delay-2">
+      Our technology stack includes end-to-end encryption, zero-knowledge proofs, and private multi-party computation (MPC) to keep your data encrypted and processed securely without exposure.  
+      With this architecture, your business can confidently deploy AI capabilities without risking sensitive information.
+    </p>
+    <ul class="tech-list fade-in-up delay-3" aria-label="Key technology features">
+      <li>Decentralized API Gateway – load balanced & encrypted.</li>
+      <li>End-to-end Data Encryption & Zero-Knowledge Protocols.</li>
+      <li>AI Model Customization & Integration Support.</li>
+      <li>Continuous Compliance & Security Monitoring.</li>
+      <li>Scalable Decentralized Cloud Infrastructure.</li>
     </ul>
   </main>
+
   <footer>
-    &copy; 2025 Decentralized Technology Services — Safeguarding Privacy for Every Industry.
+    &copy; 2025 Decentralized Technology Services — Cutting-edge AI with Privacy by Design.
   </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.1/gsap.min.js"></script>
-  <script>
-    // Animate tech items staggered fade-up on load
-    gsap.from(".tech-item", {
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      stagger: 0.18,
-      ease: "power3.out",
-      delay: 0.3
-    });
-
-    // Hover glow animation
-    document.querySelectorAll('.tech-item').forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        gsap.to(item, {
-          boxShadow: "0 0 30px #00f9ff, inset 0 0 25px #00f9ff",
-          scale: 1.07,
-          duration: 0.3,
-          ease: "power2.out"
-        });
-      });
-      item.addEventListener('mouseleave', () => {
-        gsap.to(item, {
-          boxShadow: "0 0 12px #3bd1ffaa, inset 0 0 20px #3bd1ff44",
-          scale: 1,
-          duration: 0.3,
-          ease: "power2.out"
-        });
-      });
-    });
-  </script>
 </body>
 </html>
