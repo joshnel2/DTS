@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Use Cases | Decentralized Technology Services</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
   <link
@@ -13,18 +13,14 @@
     rel="stylesheet"
   />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.12.0/cdn.min.js" defer></script>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #0f172a, #030615);
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #020617);
       color: #e0e7ff;
     }
-    h1,
-    h2,
-    h3,
-    h4 {
-      color: #60a5fa;
+    h1, h2, h3 {
+      color: #38bdf8;
       font-weight: 700;
     }
     p {
@@ -32,23 +28,20 @@
       font-weight: 500;
     }
     a {
-      color: #38bdf8;
+      color: #0ea5e9;
       font-weight: 600;
+      transition: color 0.3s ease;
     }
     a:hover {
-      color: #22d3ee;
+      color: #06b6d4;
     }
   </style>
 </head>
 <body>
-  <header
-    class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur z-50"
-  >
-    <div
-      class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
-    >
-      <h1 class="text-2xl font-bold text-blue-400">DTS</h1>
-      <nav class="space-x-6 text-sm font-semibold">
+  <header class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-extrabold tracking-wide text-cyan-400 select-none">DTS</h1>
+      <nav class="space-x-6 text-sm font-semibold tracking-wide">
         <a href="index.html" class="hover:text-cyan-400">Home</a>
         <a href="services.html" class="hover:text-cyan-400">Services</a>
         <a href="technology.html" class="hover:text-cyan-400">Technology</a>
@@ -59,91 +52,107 @@
     </div>
   </header>
 
-  <main class="pt-24 max-w-6xl mx-auto px-6 pb-24">
-    <h2
-      class="text-4xl font-extrabold mb-12 text-blue-400 text-center"
-      data-aos="fade-up"
-    >
-      Real-World Use Cases
+  <main class="pt-32 max-w-6xl mx-auto px-6">
+    <h2 data-aos="fade-down" class="text-4xl font-extrabold mb-12 tracking-tight text-cyan-400 text-center">
+      Real-World Use Cases for DTS
     </h2>
 
-    <section
-      class="grid grid-cols-1 md:grid-cols-3 gap-10"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
-      <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-500">
-        <h3 class="text-2xl font-bold mb-4">Healthcare</h3>
-        <p>
-          Enable hospitals and clinics to leverage AI-powered diagnostics and analytics
-          without risking patient data exposure. DTS ensures HIPAA-compliant privacy and
-          decentralized data control.
+    <section class="space-y-12">
+      <article
+        class="bg-gray-800 bg-opacity-70 p-8 rounded-xl shadow-lg hover:shadow-cyan-500 transition-shadow"
+        data-aos="fade-up"
+      >
+        <h3 class="text-3xl mb-4">Healthcare Providers</h3>
+        <p class="mb-3">
+          DTS enables healthcare applications to integrate advanced AI-driven diagnostics, patient
+          risk scoring, and personalized treatment suggestions — all while maintaining HIPAA-compliant
+          data privacy through our decentralized, encrypted API gateways.
         </p>
-      </div>
+        <p>
+          By shielding patient data from centralized exposure, medical professionals can harness AI
+          confidently, improving outcomes without sacrificing compliance or trust.
+        </p>
+      </article>
 
-      <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-500">
-        <h3 class="text-2xl font-bold mb-4">Finance</h3>
-        <p>
-          Provide financial institutions with AI-driven fraud detection and personalized
-          services while maintaining strict compliance with data protection regulations
-          and preserving client confidentiality.
+      <article
+        class="bg-gray-800 bg-opacity-70 p-8 rounded-xl shadow-lg hover:shadow-cyan-500 transition-shadow"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
+        <h3 class="text-3xl mb-4">Financial Services & Fintech</h3>
+        <p class="mb-3">
+          Banks and fintech firms benefit from DTS by integrating fraud detection, credit scoring,
+          and customer service AI tools securely, ensuring PCI DSS and GDPR compliance.
         </p>
-      </div>
+        <p>
+          Our decentralized routing prevents data leakage in highly regulated environments,
+          enabling financial institutions to innovate rapidly without risking customer trust.
+        </p>
+      </article>
 
-      <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-500">
-        <h3 class="text-2xl font-bold mb-4">Legal Services</h3>
-        <p>
-          Support law firms with AI tools that automate contract analysis, case research,
-          and due diligence—all while guaranteeing client-attorney privilege and data
-          security.
+      <article
+        class="bg-gray-800 bg-opacity-70 p-8 rounded-xl shadow-lg hover:shadow-cyan-500 transition-shadow"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <h3 class="text-3xl mb-4">E-Commerce & Retail</h3>
+        <p class="mb-3">
+          E-commerce platforms leverage DTS to integrate AI for personalized recommendations,
+          dynamic pricing, and inventory management while preserving customer privacy.
         </p>
-      </div>
+        <p>
+          Our privacy-first API orchestration means consumer data remains protected from centralized
+          exploitation, enhancing brand reputation and loyalty.
+        </p>
+      </article>
 
-      <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-500">
-        <h3 class="text-2xl font-bold mb-4">E-commerce</h3>
-        <p>
-          Help online retailers personalize customer experiences using AI recommendations
-          while protecting shopper data from exposure or misuse via our decentralized
-          service layer.
+      <article
+        class="bg-gray-800 bg-opacity-70 p-8 rounded-xl shadow-lg hover:shadow-cyan-500 transition-shadow"
+        data-aos="fade-up"
+        data-aos-delay="450"
+      >
+        <h3 class="text-3xl mb-4">Enterprise SaaS & Cloud Platforms</h3>
+        <p class="mb-3">
+          Software providers and cloud platforms can safely adopt AI-powered automation, analytics,
+          and customer engagement features without exposing sensitive enterprise data.
         </p>
-      </div>
+        <p>
+          DTS provides the security backbone, maintaining zero-knowledge routing and
+          comprehensive auditability for your clients.
+        </p>
+      </article>
 
-      <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-500">
-        <h3 class="text-2xl font-bold mb-4">Smart Cities</h3>
-        <p>
-          Facilitate AI-driven traffic management, resource allocation, and safety
-          monitoring with data privacy at the core, empowering city administrators to
-          innovate responsibly.
+      <article
+        class="bg-gray-800 bg-opacity-70 p-8 rounded-xl shadow-lg hover:shadow-cyan-500 transition-shadow"
+        data-aos="fade-up"
+        data-aos-delay="600"
+      >
+        <h3 class="text-3xl mb-4">Government & Public Sector</h3>
+        <p class="mb-3">
+          Government agencies can implement AI-driven data analysis, citizen service automation,
+          and threat detection tools through DTS, ensuring compliance with strict data sovereignty
+          and privacy laws.
         </p>
-      </div>
-
-      <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-500">
-        <h3 class="text-2xl font-bold mb-4">Education</h3>
         <p>
-          Deliver AI-powered adaptive learning platforms that protect student privacy
-          and comply with educational data regulations while enhancing engagement and
-          outcomes.
+          Our decentralized architecture minimizes risks of centralized data breaches in sensitive public sector deployments.
         </p>
-      </div>
+      </article>
     </section>
 
     <div class="text-center mt-16" data-aos="zoom-in">
-      <a href="contact.html" class="btn-primary inline-block px-8 py-3 rounded-md bg-blue-600 hover:bg-blue-700 transition-colors text-white font-semibold shadow-lg">
-        Contact Us to Learn More
+      <a href="contact.html" class="btn-primary inline-block px-10 py-3 rounded-md">
+        Learn How DTS Can Secure Your Industry
       </a>
     </div>
   </main>
 
-  <footer
-    class="py-8 text-center text-sm text-slate-400 bg-gray-900 bg-opacity-90 mt-24"
-  >
-    &copy; 2025 Decentralized Technology Services. All rights reserved.<br />
-    <span class="text-cyan-400">Securing autonomy in the age of AI.</span>
+  <footer class="mt-32 py-8 text-center text-slate-400 bg-gray-900 bg-opacity-90">
+    &copy; 2025 Decentralized Technology Services &mdash; Safeguarding Privacy for Every Industry.
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({ once: true, duration: 1000 });
   </script>
 </body>
 </html>
