@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Contact | DTS</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 </head>
-<body class="bg-gray-950 text-white font-sans">
-  <header class="bg-black border-b border-gray-800 fixed top-0 left-0 right-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+<body class="bg-gray-950 text-white font-sans overflow-x-hidden">
+
+  <header class="fixed top-0 w-full bg-gray-900 bg-opacity-80 z-50 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-indigo-400">DTS</h1>
-      <nav class="space-x-4 text-sm">
-        <a href="index.html" class="hover:text-indigo-400">Home</a>
-        <a href="services.html" class="hover:text-indigo-400">Services</a>
-        <a href="technology.html" class="hover:text-indigo-400">Technology</a>
-        <a href="use-cases.html" class="hover:text-indigo-400">Use Cases</a>
-        <a href="about.html" class="hover:text-indigo-400">About</a>
-        <a href="contact.html" class="hover:text-indigo-400">Contact</a>
+      <nav class="space-x-6 text-sm">
+        <a href="index.html" class="hover:text-indigo-300">Home</a>
+        <a href="services.html" class="hover:text-indigo-300">Services</a>
+        <a href="technology.html" class="hover:text-indigo-300">Technology</a>
+        <a href="use-cases.html" class="hover:text-indigo-300">Use Cases</a>
+        <a href="about.html" class="hover:text-indigo-300">About</a>
+        <a href="contact.html" class="hover:text-indigo-300">Contact</a>
       </nav>
+    </div>
+  </header>
+
+  <main class="pt-28 px-6 max-w-lg mx-auto text-gray-300">
+    <h2 class="text-4xl font-semibold text-white mb-6 text-center" data-aos="fade-down">Get in Touch</h2>
+    <p class="text-center mb-8" data-aos="fade-up">
+      Questions? Want a demo? Fill out the form below, and we’ll connect in 24 hours. Or email us: <a href="mailto:dts@protonmail.com" class="text-indigo-400 hover:underline">dts@protonmail.com</a>.
+    </p>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6" data-aos="fade-up" data-aos-delay="200">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 bg-gray-800 rounded-lg border border-gray-600 focus:outline-none focus:border-indigo-500"/>
+      <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 bg-gray-800 rounded-lg border border-gray-600 focus:outline-none focus:border-indigo-500"/>
+      <textarea name="message" rows="5" placeholder="Your Message" required class="w-full px-4 py-2 bg-gray-800 rounded-lg border border-gray-600 focus:outline-none focus:border-indigo-500"></textarea>
+      <button type="submit" class="w-full py-3 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-lg font-semibold transition-transform transform hover:scale-105">Send Message</button>
+    </form>
+  </main>
+
+  <footer class="py-8 text-center text-sm text-gray-500 bg-gray-900 bg-opacity-80 mt-12">
+    &copy; 2025 DTS. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script>
+</body>
+</html>
