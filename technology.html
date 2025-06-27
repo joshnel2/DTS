@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Technology | DTS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style>body{font-family:'Orbitron',sans-serif;}</style>
 </head>
-<body class="bg-gray-950 text-white font-sans overflow-x-hidden">
+<body class="bg-gray-950 text-white overflow-x-hidden">
 
-  <header class="fixed top-0 w-full bg-gray-900 bg-opacity-80 z-50 backdrop-blur">
+  <header class="fixed w-full bg-gray-900 bg-opacity-80 backdrop-blur z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-indigo-400">DTS</h1>
       <nav class="space-x-6 text-sm">
@@ -23,29 +25,29 @@
   </header>
 
   <main class="pt-28 px-6 max-w-5xl mx-auto text-gray-300">
-    <h2 class="text-4xl font-semibold text-white mb-8 text-center" data-aos="fade-down">Our Technology</h2>
+    <h2 class="text-4xl font-semibold text-white mb-8 text-center" data-aos="fade-down">Our Architecture</h2>
     <div class="space-y-12">
-      <div data-aos="fade-up" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+      <div data-aos="fade-up" class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
         <h3 class="text-2xl font-bold text-indigo-400 mb-3">🔐 End-to-End Encryption</h3>
-        <p>Every transaction encrypted from your endpoint to the model, leaving no trace behind.</p>
+        <p>All inbound and outbound data is encrypted at transport and application layers — preserving integrity at every hop.</p>
       </div>
-      <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-bold text-indigo-400 mb-3">🕶️ API Obfuscation</h3>
-        <p>Your stack stays secret — encrypted proxies disguise the vendor/infrastructure you use.</p>
+      <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold text-indigo-400 mb-3">🕶️ API Obfuscation & Metadata Masking</h3>
+        <p>URLs, headers, metadata—everything is scrubbed and anonymized before it routes out of your network.</p>
       </div>
-      <div data-aos="fade-up" data-aos-delay="400" class="bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-bold text-indigo-400 mb-3">📡 Zero‑Knowledge Relay</h3>
-        <p>Stateless relays that don't log or store data — your data sovereignty is preserved.</p>
+      <div data-aos="fade-up" data-aos-delay="400" class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold text-indigo-400 mb-3">📡 Stateless Zero-Knowledge Relays</h3>
+        <p>No request bodies or logs are stored. Relays act purely as transient middleware—then vanish.</p>
       </div>
-      <div data-aos="fade-up" data-aos-delay="600" class="bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-bold text-indigo-400 mb-3">🧠 On‑Prem AI Hosting</h3>
-        <p>Deploy open-source LLMs in secure containers inside your environment.</p>
+      <div data-aos="fade-up" data-aos-delay="600" class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-bold text-indigo-400 mb-3">🧠 On‑Premise LLM Hosting</h3>
+        <p>Deploy models inside your own infrastructure using our hardened containers—guaranteed zero data leakage.</p>
       </div>
     </div>
   </main>
 
   <footer class="py-8 text-center text-sm text-gray-500 bg-gray-900 bg-opacity-80 mt-12">
-    &copy; 2025 DTS. All rights reserved.
+    &copy; 2025 DTS. Your data, your rules—always.
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script>
