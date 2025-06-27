@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Use Cases | Decentralized Technology Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.12.0/cdn.min.js" defer></script>
   <style>
     body {
@@ -14,7 +20,10 @@
       background: linear-gradient(180deg, #0f172a, #030615);
       color: #e0e7ff;
     }
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
       color: #60a5fa;
       font-weight: 700;
     }
@@ -29,76 +38,112 @@
     a:hover {
       color: #22d3ee;
     }
-    .card {
-      background-color: #1e293b;
-      color: #f1f5f9;
-    }
-    .btn-primary {
-      background-color: #2563eb;
-      color: #e0e7ff;
-      font-weight: 600;
-      border-radius: 0.5rem;
-      padding: 0.75rem 2rem;
-      box-shadow: 0 4px 14px 0 rgb(37 99 235 / 0.39);
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .btn-primary:hover {
-      background-color: #3b82f6;
-      transform: scale(1.05);
-    }
   </style>
 </head>
 <body>
+  <header
+    class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur z-50"
+  >
+    <div
+      class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+    >
+      <h1 class="text-2xl font-bold text-blue-400">DTS</h1>
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="index.html" class="hover:text-cyan-400">Home</a>
+        <a href="services.html" class="hover:text-cyan-400">Services</a>
+        <a href="technology.html" class="hover:text-cyan-400">Technology</a>
+        <a href="use-cases.html" class="hover:text-cyan-400">Use Cases</a>
+        <a href="about.html" class="hover:text-cyan-400">About</a>
+        <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<header class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-blue-400">DTS</h1>
-    <nav class="space-x-6 text-sm font-semibold">
-      <a href="index.html" class="hover:text-cyan-400">Home</a>
-      <a href="services.html" class="hover:text-cyan-400">Services</a>
-      <a href="technology.html" class="hover:text-cyan-400">Technology</a>
-      <a href="use-cases.html" class="hover:text-cyan-400">Use Cases</a>
-      <a href="about.html" class="hover:text-cyan-400">About</a>
-      <a href="contact.html" class="hover:text-cyan-400">Contact</a>
-    </nav>
-  </div>
-</header>
+  <main class="pt-24 max-w-6xl mx-auto px-6 pb-24">
+    <h2
+      class="text-4xl font-extrabold mb-12 text-blue-400 text-center"
+      data-aos="fade-up"
+    >
+      Real-World Use Cases
+    </h2>
 
-<main class="pt-24 max-w-6xl mx-auto px-6 pb-24">
+    <section
+      class="grid grid-cols-1 md:grid-cols-3 gap-10"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-500">
+        <h3 class="text-2xl font-bold mb-4">Healthcare</h3>
+        <p>
+          Enable hospitals and clinics to leverage AI-powered diagnostics and analytics
+          without risking patient data exposure. DTS ensures HIPAA-compliant privacy and
+          decentralized data control.
+        </p>
+      </div>
 
-  <h2 class="text-4xl font-extrabold mb-12 text-blue-400 text-center" data-aos="fade-up">
-    Use Cases: AI Privacy in Action
-  </h2>
+      <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-500">
+        <h3 class="text-2xl font-bold mb-4">Finance</h3>
+        <p>
+          Provide financial institutions with AI-driven fraud detection and personalized
+          services while maintaining strict compliance with data protection regulations
+          and preserving client confidentiality.
+        </p>
+      </div>
 
-  <section class="grid md:grid-cols-3 gap-10">
-    <div class="card p-8 rounded-lg shadow-lg hover:shadow-xl transition" data-aos="fade-up">
-      <h3 class="text-2xl font-bold mb-3">Healthcare</h3>
-      <p>
-        Secure patient data when integrating AI diagnostics. Our vaults ensure HIPAA-compliance and keep sensitive records isolated.
-      </p>
+      <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-500">
+        <h3 class="text-2xl font-bold mb-4">Legal Services</h3>
+        <p>
+          Support law firms with AI tools that automate contract analysis, case research,
+          and due diligence—all while guaranteeing client-attorney privilege and data
+          security.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-500">
+        <h3 class="text-2xl font-bold mb-4">E-commerce</h3>
+        <p>
+          Help online retailers personalize customer experiences using AI recommendations
+          while protecting shopper data from exposure or misuse via our decentralized
+          service layer.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-500">
+        <h3 class="text-2xl font-bold mb-4">Smart Cities</h3>
+        <p>
+          Facilitate AI-driven traffic management, resource allocation, and safety
+          monitoring with data privacy at the core, empowering city administrators to
+          innovate responsibly.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-500">
+        <h3 class="text-2xl font-bold mb-4">Education</h3>
+        <p>
+          Deliver AI-powered adaptive learning platforms that protect student privacy
+          and comply with educational data regulations while enhancing engagement and
+          outcomes.
+        </p>
+      </div>
+    </section>
+
+    <div class="text-center mt-16" data-aos="zoom-in">
+      <a href="contact.html" class="btn-primary inline-block px-8 py-3 rounded-md bg-blue-600 hover:bg-blue-700 transition-colors text-white font-semibold shadow-lg">
+        Contact Us to Learn More
+      </a>
     </div>
-    <div class="card p-8 rounded-lg shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
-      <h3 class="text-2xl font-bold mb-3">Finance</h3>
-      <p>
-        Protect financial models and client data with encrypted API proxies while leveraging AI-powered risk analysis.
-      </p>
-    </div>
-    <div class="card p-8 rounded-lg shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
-      <h3 class="text-2xl font-bold mb-3">E-commerce</h3>
-      <p>
-        Personalize user experience through AI without exposing buyer behavior or backend algorithms.
-      </p>
-    </div>
-    <div class="card p-8 rounded-lg shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
-      <h3 class="text-2xl font-bold mb-3">Legal</h3>
-      <p>
-        Ensure attorney-client confidentiality with containerized AI models that never transmit data externally.
-      </p>
-    </div>
-    <div class="card p-8 rounded-lg shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="400">
-      <h3 class="text-2xl font-bold mb-3">Media & Entertainment</h3>
-      <p>
-        Manage creative AI workflows securely while protecting intellectual property rights.
-      </p>
-    </div>
-    <div class="card p-8 rounded-lg shadow-lg hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="500">
+  </main>
+
+  <footer
+    class="py-8 text-center text-sm text-slate-400 bg-gray-900 bg-opacity-90 mt-24"
+  >
+    &copy; 2025 Decentralized Technology Services. All rights reserved.<br />
+    <span class="text-cyan-400">Securing autonomy in the age of AI.</span>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
