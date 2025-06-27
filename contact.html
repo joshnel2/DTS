@@ -1,135 +1,111 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Decentralized Technology Services</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #020617, #071727);
-      color: #a9c1ff;
-      margin: 0;
-      padding: 0 2rem 3rem;
+      background: linear-gradient(135deg, #0a132f, #1f2a47);
+      color: #a0cfff;
       min-height: 100vh;
       overflow-x: hidden;
+      position: relative;
     }
     header {
       position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(7, 23, 39, 0.9);
-      backdrop-filter: saturate(180%) blur(8px);
-      z-index: 100;
+      top: 0; left: 0; right: 0;
+      background: rgba(10, 19, 47, 0.95);
+      border-bottom: 1px solid #1488fa;
+      backdrop-filter: blur(10px);
       padding: 1rem 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #0d47a1;
+      z-index: 1000;
     }
     header h1 {
-      font-size: 1.9rem;
-      color: #3bd1ff;
-      letter-spacing: 0.15em;
+      color: #00baff;
+      font-size: 2.4rem;
+      letter-spacing: 0.3em;
       user-select: none;
-      text-shadow:
-        0 0 8px #3bd1ff,
-        0 0 15px #3bd1ff;
+      text-shadow: 0 0 14px #00baffaa;
     }
     nav a {
       margin-left: 2rem;
-      font-size: 1.05rem;
-      color: #7aaeff;
+      color: #7fbfff;
       font-weight: 600;
-      position: relative;
+      font-size: 1.05rem;
       text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
     }
-    nav a:hover {
-      color: #3bd1ff;
-      text-shadow: 0 0 12px #3bd1ff;
+    nav a:hover,
+    nav a.active {
+      color: #00baff;
+      text-shadow: 0 0 15px #00baff;
     }
     main {
-      padding-top: 100px;
+      padding: 120px 3rem 4rem;
       max-width: 600px;
       margin: 0 auto;
-      color: #a5c0ffcc;
-      font-weight: 500;
     }
     h2 {
-      font-size: 2.8rem;
+      font-size: 2.9rem;
+      color: #00baff;
+      text-shadow: 0 0 18px #00baffaa;
       margin-bottom: 1.3rem;
-      color: #4db9ff;
-      text-shadow: 0 0 12px #3bd1ff;
+      text-align: center;
     }
     form {
       display: flex;
       flex-direction: column;
-      gap: 1.3rem;
-      background: #071727cc;
-      padding: 2rem 2.5rem;
-      border-radius: 14px;
-      box-shadow: 0 0 15px #3bd1ffaa;
+      gap: 1.1rem;
     }
     label {
       font-weight: 600;
-      font-size: 1rem;
-      color: #92bfff;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      background: #011026;
-      border: 1.5px solid #2a4dbb;
-      border-radius: 9px;
-      padding: 0.8rem 1.1rem;
-      color: #b6d1ff;
       font-size: 1.05rem;
+      color: #88bbffcc;
+    }
+    input, textarea {
+      background: #12213d;
+      border: 1.5px solid #00baff;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
       font-family: 'Orbitron', sans-serif;
-      resize: vertical;
+      font-size: 1rem;
+      color: #a0cfff;
+      outline-offset: 2px;
       transition: border-color 0.3s ease;
     }
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    textarea:focus {
-      border-color: #3bd1ff;
+    input:focus, textarea:focus {
+      border-color: #00e1ff;
+      box-shadow: 0 0 10px #00baffaa;
       outline: none;
     }
     textarea {
-      min-height: 110px;
+      resize: vertical;
+      min-height: 120px;
     }
     button {
-      background: #3bd1ff;
+      background: #00baff;
       border: none;
-      border-radius: 12px;
-      padding: 0.9rem 1.5rem;
-      font-size: 1.15rem;
+      padding: 0.85rem;
       font-weight: 700;
-      color: #001c30;
+      font-size: 1.15rem;
+      color: #0a132f;
+      border-radius: 6px;
       cursor: pointer;
-      box-shadow:
-        0 0 16px #3bd1ff,
-        inset 0 0 24px #3bd1ff;
-      transition: background-color 0.35s ease;
+      transition: background 0.3s ease;
+      text-shadow: none;
+      letter-spacing: 0.05em;
+      user-select: none;
     }
     button:hover {
-      background-color: #00baff;
-      box-shadow:
-        0 0 26px #00baff,
-        inset 0 0 28px #00baff;
-    }
-    footer {
-      padding: 2rem;
-      text-align: center;
-      color: #446699;
-      font-size: 0.85rem;
-      user-select: none;
-      background: linear-gradient(135deg, #020617, #071727);
-      border-top: 1px solid #0d47a1;
-      margin-top: 3rem;
+      background: #00e1ff;
+      text-shadow: 0 0 10px #00baffcc;
     }
   </style>
 </head>
@@ -142,23 +118,28 @@
       <a href="technology.html">Technology</a>
       <a href="use-cases.html">Use Cases</a>
       <a href="about.html">About</a>
-      <a href="contact.html" style="text-shadow: 0 0 20px #3bd1ff;">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
+
   <main>
     <h2>Contact Us</h2>
-    <form id="contact-form" action="https://formspree.io/f/yourformid" method="POST" novalidate>
+    <form action="mailto:info@decentralizedtech.com" method="post" enctype="text/plain">
       <label for="name">Name</label>
-      <input type="text" id="name" name="name" required placeholder="Your full name" />
+      <input id="name" name="name" required autocomplete="name" type="text" placeholder="Your full name" />
+      
       <label for="email">Email</label>
-      <input type="email" id="email" name="_replyto" required placeholder="you@example.com" />
+      <input id="email" name="email" required autocomplete="email" type="email" placeholder="you@example.com" />
+      
       <label for="message">Message</label>
       <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
-      <button type="submit">Send Message</button>
+      
+      <button type="submit" aria-label="Send message to Decentralized Technology Services">Send</button>
     </form>
   </main>
+
   <footer>
-    &copy; 2025 Decentralized Technology Services — Safeguarding Privacy for Every Industry.
+    &copy; 2025 Decentralized Technology Services — Get in Touch.
   </footer>
 </body>
 </html>
