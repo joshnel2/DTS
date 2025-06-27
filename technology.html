@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Technology | DTS</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 </head>
-<body class="bg-gray-950 text-white font-sans">
-  <header class="bg-black border-b border-gray-800 fixed top-0 left-0 right-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+<body class="bg-gray-950 text-white font-sans overflow-x-hidden">
+
+  <header class="fixed top-0 w-full bg-gray-900 bg-opacity-80 z-50 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-indigo-400">DTS</h1>
-      <nav class="space-x-4 text-sm">
-        <a href="index.html" class="hover:text-indigo-400">Home</a>
-        <a href="services.html" class="hover:text-indigo-400">Services</a>
-        <a href="technology.html" class="hover:text-indigo-400">Technology</a>
-        <a href="use-cases.html" class="hover:text-indigo-400">Use Cases</a>
-        <a href="about.html" class="hover:text-indigo-400">About</a>
-        <a href="contact.html" class="hover:text-indigo-400">Contact</a>
+      <nav class="space-x-6 text-sm">
+        <a href="index.html" class="hover:text-indigo-300">Home</a>
+        <a href="services.html" class="hover:text-indigo-300">Services</a>
+        <a href="technology.html" class="hover:text-indigo-300">Technology</a>
+        <a href="use-cases.html" class="hover:text-indigo-300">Use Cases</a>
+        <a href="about.html" class="hover:text-indigo-300">About</a>
+        <a href="contact.html" class="hover:text-indigo-300">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="pt-28 px-6 max-w-5xl mx-auto text-gray-300">
-    <h2 class="text-4xl font-bold mb-8 text-white">Our Technology Stack</h2>
-    <ul class="space-y-6">
-      <li><strong>🔐 End-to-End Encryption:</strong> Every data packet is encrypted from your server to the final LLM.</li>
-      <li><strong>🕶️ API Obfuscation:</strong> Our proxy system hides third-party endpoints so your competitors can’t reverse-engineer your tech stack.</li>
-      <li><strong>📡 Zero-Knowledge Relays:</strong> We don’t log requests. Our relays are fully stateless.</li>
-      <li><strong>🧠 On-Prem LLMs:</strong> Use secure containers to run open-source AI with no cloud leakage.</li>
-    </ul>
+    <h2 class="text-4xl font-semibold text-white mb-8 text-center" data-aos="fade-down">Our Technology</h2>
+    <div class="space-y-12">
+      <div data-aos="fade-up" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-indigo-400 mb-3">🔐 End-to-End Encryption</h3>
+        <p>Every transaction encrypted from your endpoint to the model, leaving no trace behind.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-indigo-400 mb-3">🕶️ API Obfuscation</h3>
+        <p>Your stack stays secret — encrypted proxies disguise the vendor/infrastructure you use.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="400" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-indigo-400 mb-3">📡 Zero‑Knowledge Relay</h3>
+        <p>Stateless relays that don't log or store data — your data sovereignty is preserved.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="600" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-indigo-400 mb-3">🧠 On‑Prem AI Hosting</h3>
+        <p>Deploy open-source LLMs in secure containers inside your environment.</p>
+      </div>
+    </div>
   </main>
 
-  <footer class="bg-black border-t border-gray-800 py-6 text-center text-sm text-gray-500 mt-16">
+  <footer class="py-8 text-center text-sm text-gray-500 bg-gray-900 bg-opacity-80 mt-12">
     &copy; 2025 DTS. All rights reserved.
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script>
 </body>
 </html>
