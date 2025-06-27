@@ -1,122 +1,151 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services | Decentralized Technology Services</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #020617, #071727);
-      color: #a9c1ff;
+      background: linear-gradient(135deg, #0a132f, #1f2a47);
+      color: #a0cfff;
       min-height: 100vh;
-      margin: 0;
-      padding: 0 2rem 3rem;
       overflow-x: hidden;
+      position: relative;
     }
     header {
       position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(7, 23, 39, 0.9);
-      backdrop-filter: saturate(180%) blur(8px);
-      z-index: 100;
+      top: 0; left: 0; right: 0;
+      background: rgba(10, 19, 47, 0.95);
+      border-bottom: 1px solid #1488fa;
+      backdrop-filter: blur(10px);
       padding: 1rem 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #0d47a1;
+      z-index: 1000;
     }
     header h1 {
-      font-size: 1.9rem;
-      color: #3bd1ff;
-      letter-spacing: 0.15em;
+      color: #00baff;
+      font-size: 2.4rem;
+      letter-spacing: 0.3em;
       user-select: none;
-      text-shadow:
-        0 0 8px #3bd1ff,
-        0 0 15px #3bd1ff;
+      text-shadow: 0 0 14px #00baffaa;
     }
     nav a {
       margin-left: 2rem;
-      font-size: 1.05rem;
-      color: #7aaeff;
+      color: #7fbfff;
       font-weight: 600;
-      position: relative;
+      font-size: 1.05rem;
       text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
     }
-    nav a:hover {
-      color: #3bd1ff;
-      text-shadow: 0 0 12px #3bd1ff;
+    nav a:hover,
+    nav a.active {
+      color: #00baff;
+      text-shadow: 0 0 15px #00baff;
     }
     main {
-      padding-top: 100px;
+      padding: 120px 3rem 4rem;
       max-width: 1000px;
       margin: 0 auto;
     }
     h2 {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-      color: #4db9ff;
-      text-shadow: 0 0 12px #3bd1ff;
+      font-size: 2.9rem;
+      color: #00baff;
+      text-shadow: 0 0 18px #00baffaa;
+      margin-bottom: 1.5rem;
+      text-align: center;
     }
     p.lead {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      color: #8dbbff;
-      max-width: 700px;
-      line-height: 1.5;
-      text-shadow: 0 0 4px #3bd1ff;
+      font-size: 1.22rem;
+      max-width: 750px;
+      margin: 0 auto 3rem auto;
+      color: #a8ccffcc;
+      text-shadow: 0 0 8px #009dd9aa;
+      line-height: 1.6;
+      font-weight: 500;
+      text-align: center;
     }
-    .service-list {
+    .services-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
       gap: 2rem;
     }
     .service-card {
-      background: #071727;
+      background: #071727cc;
       border-radius: 14px;
-      box-shadow:
-        0 0 12px #3bd1ff88,
-        inset 0 0 10px #3bd1ff44;
-      padding: 2rem;
-      color: #b3d0ff;
-      cursor: default;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      position: relative;
-      overflow: hidden;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 0 20px #00baffaa;
       border: 1px solid transparent;
+      transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+      cursor: default;
+      color: #a9ccffdd;
+      user-select: none;
+      position: relative;
     }
     .service-card:hover {
-      box-shadow:
-        0 0 24px #3bd1ffcc,
-        inset 0 0 20px #3bd1ff88;
-      transform: translateY(-10px);
-      border-color: #3bd1ff99;
+      box-shadow: 0 0 40px #00e1ffdd;
+      transform: translateY(-12px);
+      border-color: #00e1ffcc;
     }
     .service-card h3 {
-      font-size: 1.6rem;
-      margin-bottom: 0.7rem;
-      color: #00fff7;
-      text-shadow: 0 0 12px #00fff7;
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: #00baff;
+      text-shadow: 0 0 15px #00baffcc;
     }
     .service-card p {
       font-weight: 500;
-      color: #abd7ffcc;
-      line-height: 1.45;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #a8ccffdd;
     }
-    footer {
-      padding: 2rem;
-      text-align: center;
-      color: #446699;
-      font-size: 0.85rem;
-      user-select: none;
-      background: #020617;
-      border-top: 1px solid #0d47a1;
-      margin-top: 3rem;
+    /* Floating decorative squares */
+    .floating-square {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: #0077bb33;
+      border: 2px solid #00baff77;
+      border-radius: 14px;
+      filter: drop-shadow(0 0 6px #00baffaa);
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      z-index: 0;
+    }
+    .square1 {
+      top: 15vh;
+      left: 10vw;
+      animation: floatS1 14s infinite alternate;
+    }
+    .square2 {
+      top: 40vh;
+      right: 12vw;
+      animation: floatS2 16s infinite alternate;
+    }
+    .square3 {
+      top: 75vh;
+      left: 25vw;
+      animation: floatS3 18s infinite alternate;
+    }
+    /* Animations */
+    @keyframes floatS1 {
+      0% { transform: translateY(0) translateX(0) rotate(0deg); }
+      50% { transform: translateY(-15px) translateX(10px) rotate(15deg);}
+      100% { transform: translateY(0) translateX(0) rotate(0deg);}
+    }
+    @keyframes floatS2 {
+      0% { transform: translateY(0) translateX(0) rotate(0deg);}
+      50% { transform: translateY(20px) translateX(-15px) rotate(-20deg);}
+      100% { transform: translateY(0) translateX(0) rotate(0deg);}
+    }
+    @keyframes floatS3 {
+      0% { transform: translateY(0) translateX(0) rotate(0deg);}
+      50% { transform: translateY(-10px) translateX(20px) rotate(10deg);}
+      100% { transform: translateY(0) translateX(0) rotate(0deg);}
     }
   </style>
 </head>
@@ -125,80 +154,70 @@
     <h1>DTS</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="services.html" style="text-shadow: 0 0 20px #3bd1ff;">Services</a>
+      <a href="services.html" class="active">Services</a>
       <a href="technology.html">Technology</a>
       <a href="use-cases.html">Use Cases</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
+  <div class="floating-square square1"></div>
+  <div class="floating-square square2"></div>
+  <div class="floating-square square3"></div>
+
   <main>
     <h2>Our Services</h2>
-    <p class="lead">We provide cutting-edge decentralized AI integration solutions that ensure your business stays private, compliant, and competitive in the AI revolution.</p>
+    <p class="lead">
+      We specialize in integrating advanced AI capabilities with your existing services and apps — 
+      all while ensuring **top-tier security, privacy, and control.**
+      Let us help you stay competitive without sacrificing trust.
+    </p>
+    <section class="services-list" aria-label="List of services">
+      <article class="service-card" tabindex="0" aria-labelledby="service1-title">
+        <h3 id="service1-title">Private AI API Gateway</h3>
+        <p>
+          Seamlessly connect to multiple AI data centers through our decentralized API gateway,
+          keeping your client's data private and encrypted at all times.
+        </p>
+      </article>
 
-    <section class="service-list" id="services-container">
-      <article class="service-card" data-index="0">
-        <h3>Privacy-First AI Gateways</h3>
-        <p>Seamlessly connect your apps with AI services through our encrypted, decentralized gateways that keep your client data private.</p>
+      <article class="service-card" tabindex="0" aria-labelledby="service2-title">
+        <h3 id="service2-title">Custom AI Integration</h3>
+        <p>
+          Tailored AI model integrations with your software, apps, and platforms,
+          fully secured and compliant with data privacy regulations.
+        </p>
       </article>
-      <article class="service-card" data-index="1">
-        <h3>API Abstraction & Orchestration</h3>
-        <p>We simplify complex API integrations across multiple AI platforms, masking backend details while maintaining performance and security.</p>
+
+      <article class="service-card" tabindex="0" aria-labelledby="service3-title">
+        <h3 id="service3-title">Data Privacy & Encryption</h3>
+        <p>
+          End-to-end encryption and zero-knowledge data processing
+          to ensure your user data is never exposed or sold.
+        </p>
       </article>
-      <article class="service-card" data-index="2">
-        <h3>Real-Time Compliance Monitoring</h3>
-        <p>Keep your business compliant with evolving data privacy regulations using our AI-powered monitoring and automated alerts.</p>
+
+      <article class="service-card" tabindex="0" aria-labelledby="service4-title">
+        <h3 id="service4-title">AI Risk & Compliance Monitoring</h3>
+        <p>
+          Continuous monitoring of AI interactions and compliance adherence
+          to keep your business protected in the evolving AI regulatory landscape.
+        </p>
       </article>
-      <article class="service-card" data-index="3">
-        <h3>Custom AI Model Deployment</h3>
-        <p>Deploy and manage custom AI models on decentralized infrastructure tailored to your business needs with guaranteed data privacy.</p>
-      </article>
-      <article class="service-card" data-index="4">
-        <h3>Secure Data Analytics</h3>
-        <p>Analyze business data securely without exposing sensitive client information using our zero-knowledge proof analytics frameworks.</p>
-      </article>
-      <article class="service-card" data-index="5">
-        <h3>24/7 AI Integration Support</h3>
-        <p>Get expert support anytime to ensure your AI integrations run smoothly and your privacy standards are always met.</p>
+
+      <article class="service-card" tabindex="0" aria-labelledby="service5-title">
+        <h3 id="service5-title">Scalable AI Infrastructure</h3>
+        <p>
+          Use our decentralized cloud infrastructure to scale your AI-powered apps
+          with unmatched privacy and reliability.
+        </p>
       </article>
     </section>
   </main>
+
   <footer>
-    &copy; 2025 Decentralized Technology Services — Safeguarding Privacy for Every Industry.
+    &copy; 2025 Decentralized Technology Services — Empowering Secure AI Adoption.
   </footer>
-
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.1/gsap.min.js"></script>
-  <script>
-    // Animate cards staggered fade-in + slight rise on load
-    gsap.from(".service-card", {
-      duration: 1,
-      opacity: 0,
-      y: 40,
-      stagger: 0.2,
-      ease: "power3.out",
-      delay: 0.3
-    });
-
-    // Hover glow animation for cards
-    document.querySelectorAll('.service-card').forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        gsap.to(card, {
-          boxShadow: "0 0 30px #00fff7, inset 0 0 25px #00fff7",
-          scale: 1.05,
-          duration: 0.35,
-          ease: "power2.out"
-        });
-      });
-      card.addEventListener('mouseleave', () => {
-        gsap.to(card, {
-          boxShadow: "0 0 12px #3bd1ff88, inset 0 0 10px #3bd1ff44",
-          scale: 1,
-          duration: 0.35,
-          ease: "power2.out"
-        });
-      });
-    });
-  </script>
 </body>
 </html>
