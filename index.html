@@ -1,152 +1,120 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Decentralized Technology Services - Home</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap"
-    rel="stylesheet"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decentralized Technology Services — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
   <style>
-    /* Reset & base */
+    /* Reset */
     * {
       margin: 0; padding: 0; box-sizing: border-box;
     }
     body {
       font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(ellipse at center, #020617, #0f172a);
-      color: #b0c8ff;
+      background: linear-gradient(135deg, #0a132f, #1f2a47);
+      color: #a0cfff;
       overflow-x: hidden;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    a:hover {
-      color: #3bd1ff;
-      text-shadow: 0 0 8px #3bd1ff;
+      position: relative;
     }
     header {
       position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(10, 15, 35, 0.9);
-      backdrop-filter: saturate(180%) blur(8px);
-      z-index: 100;
+      top: 0; left: 0; right: 0;
+      background: rgba(10, 19, 47, 0.95);
+      border-bottom: 1px solid #1488fa;
+      backdrop-filter: blur(10px);
       padding: 1rem 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #0d47a1;
+      z-index: 1000;
     }
     header h1 {
-      font-size: 1.9rem;
-      color: #3bd1ff;
-      letter-spacing: 0.15em;
+      color: #00baff;
+      font-size: 2.4rem;
+      letter-spacing: 0.3em;
+      text-shadow: 0 0 14px #00baffaa;
       user-select: none;
-      text-shadow:
-        0 0 8px #3bd1ff,
-        0 0 15px #3bd1ff;
     }
     nav a {
       margin-left: 2rem;
+      color: #7fbfff;
+      font-weight: 600;
       font-size: 1.05rem;
+      text-decoration: none;
       position: relative;
+      transition: color 0.3s ease;
     }
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background: #3bd1ff;
-      bottom: -5px;
-      left: 0;
-      transition: width 0.3s ease;
-    }
-    nav a:hover::after {
-      width: 100%;
+    nav a:hover,
+    nav a.active {
+      color: #00baff;
+      text-shadow: 0 0 15px #00baff;
     }
     main {
-      padding-top: 100px;
-      flex: 1;
-      max-width: 1200px;
+      padding: 120px 3rem 4rem;
+      max-width: 1100px;
       margin: 0 auto;
-      padding-left: 2rem;
-      padding-right: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: calc(100vh - 100px);
+      text-align: center;
     }
-    .hero-title {
-      font-size: 3.5rem;
-      line-height: 1.1;
-      color: #58a6ff;
-      text-shadow:
-        0 0 6px #58a6ff,
-        0 0 10px #3bd1ff,
-        0 0 15px #3bd1ff;
+    h2 {
+      font-size: 3rem;
       margin-bottom: 1rem;
-      max-width: 800px;
-      letter-spacing: 0.05em;
+      color: #00baff;
+      text-shadow: 0 0 18px #00baffaa;
     }
-    .hero-subtitle {
-      font-size: 1.3rem;
+    p.lead {
+      font-size: 1.25rem;
+      margin-bottom: 2.8rem;
       max-width: 700px;
-      margin-bottom: 2rem;
-      color: #9ec5ff;
-      text-shadow: 0 0 4px #58a6ff;
-      line-height: 1.4;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+      color: #a8ccffcc;
+      text-shadow: 0 0 6px #009dd9aa;
     }
-    .btn-primary {
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(90deg, #3bd1ff 0%, #00ffd6 70%);
-      padding: 1rem 3rem;
-      border-radius: 40px;
+    .cta-button {
+      font-size: 1.3rem;
       font-weight: 700;
-      color: #020617;
-      cursor: pointer;
-      text-transform: uppercase;
-      font-size: 1.1rem;
-      box-shadow:
-        0 0 12px #3bd1ff,
-        0 0 20px #00ffd6;
+      padding: 1rem 3rem;
+      background: #00baff;
+      color: #001822;
       border: none;
-      transition: box-shadow 0.3s ease;
-      user-select: none;
-      outline-offset: 3px;
-      outline-color: #00ffd6;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 0 30px #00baffaa;
+      transition: background-color 0.3s ease, box-shadow 0.4s ease;
     }
-    .btn-primary:hover {
-      box-shadow:
-        0 0 24px #3bd1ff,
-        0 0 40px #00ffd6;
-      transform: scale(1.05);
+    .cta-button:hover {
+      background-color: #00e1ff;
+      box-shadow: 0 0 45px #00e1ffbb;
     }
     footer {
       padding: 2rem;
       text-align: center;
+      font-size: 0.9rem;
       color: #446699;
-      font-size: 0.85rem;
       user-select: none;
-      background: #020617;
-      border-top: 1px solid #0d47a1;
+      border-top: 1px solid #0c3e78;
+      background: linear-gradient(135deg, #0a132f, #1f2a47);
+      margin-top: 4rem;
     }
-    /* Canvas styles */
-    #bg-canvas {
+
+    /* Floating circles background */
+    #floating-bg {
       position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
+      top: 0; left: 0; width: 100vw; height: 100vh;
       pointer-events: none;
+      z-index: 0;
+      overflow: visible;
+    }
+    .floating-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.3;
+      filter: drop-shadow(0 0 4px #00baff88);
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
     }
   </style>
 </head>
@@ -154,7 +122,7 @@
   <header>
     <h1>DTS</h1>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="services.html">Services</a>
       <a href="technology.html">Technology</a>
       <a href="use-cases.html">Use Cases</a>
@@ -163,138 +131,46 @@
     </nav>
   </header>
 
-  <canvas id="bg-canvas"></canvas>
+  <div id="floating-bg">
+    <div class="floating-circle" style="width: 120px; height: 120px; background: #00baff55; top: 10vh; left: 10vw; animation: float1 12s infinite alternate;"></div>
+    <div class="floating-circle" style="width: 90px; height: 90px; background: #005a9c88; top: 50vh; left: 70vw; animation: float2 10s infinite alternate;"></div>
+    <div class="floating-circle" style="width: 60px; height: 60px; background: #00baffaa; top: 80vh; left: 20vw; animation: float3 14s infinite alternate;"></div>
+    <div class="floating-circle" style="width: 150px; height: 150px; background: #0094d799; top: 30vh; left: 80vw; animation: float4 15s infinite alternate;"></div>
+  </div>
 
   <main>
-    <h2 class="hero-title">Bridging AI & Services with Privacy at Scale</h2>
-    <p class="hero-subtitle">
-      Decentralized Technology Services empowers businesses and apps to harness AI securely — 
-      protecting client data through decentralized, zero-knowledge gateways while ensuring compliance and performance.
+    <h2>Decentralized Technology Services</h2>
+    <p class="lead">
+      Bridging traditional services and apps with cutting-edge AI — while ensuring **your data stays private, secure, and under your control.**  
+      We empower businesses to thrive in the AI revolution without compromising privacy or security.
     </p>
-    <button class="btn-primary" id="btn-get-started">Get Started</button>
+    <button class="cta-button" onclick="window.location.href='services.html'">Explore Our Services</button>
   </main>
 
   <footer>
-    &copy; 2025 Decentralized Technology Services — Safeguarding Privacy for Every Industry.
+    &copy; 2025 Decentralized Technology Services — Privacy-first AI for the Future.
   </footer>
 
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.1/gsap.min.js"></script>
-  <!-- three.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
-
   <script>
-    // GSAP hero animation
-    gsap.from(".hero-title", {duration: 2, opacity: 0, y: -40, ease: "power4.out"});
-    gsap.from(".hero-subtitle", {duration: 2, opacity: 0, y: 20, delay: 0.5, ease: "power4.out"});
-    gsap.from(".btn-primary", {duration: 2, opacity: 0, scale: 0.8, delay: 1, ease: "elastic.out(1, 0.4)"});
+    /* Floating animations for background circles */
+    const floatAnims = {
+      float1: [{ y: 0 }, { y: 15 }],
+      float2: [{ y: 0 }, { y: -20 }],
+      float3: [{ y: 0 }, { y: 10 }],
+      float4: [{ y: 0 }, { y: -15 }]
+    };
 
-    // Button hover glow effect
-    const btn = document.getElementById('btn-get-started');
-    btn.addEventListener('mouseenter', () => {
-      gsap.to(btn, {boxShadow: "0 0 20px #00ffd6, 0 0 40px #3bd1ff", scale: 1.1, duration: 0.3});
+    document.querySelectorAll('.floating-circle').forEach((el, i) => {
+      const animName = el.style.animation.match(/(float\d)/)[1];
+      const keyframes = floatAnims[animName];
+      let direction = 1;
+      let posIndex = 0;
+      setInterval(() => {
+        posIndex = (posIndex + direction) % 2;
+        el.style.transform = `translateY(${keyframes[posIndex].y}px)`;
+        if(posIndex === 1) direction = -1; else direction = 1;
+      }, 6000 + i * 1000);
     });
-    btn.addEventListener('mouseleave', () => {
-      gsap.to(btn, {boxShadow: "0 0 12px #3bd1ff, 0 0 20px #00ffd6", scale: 1, duration: 0.3});
-    });
-
-    // three.js animated background: floating particles connected by lines
-    const canvas = document.getElementById('bg-canvas');
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0x000000, 0);
-
-    const scene = new THREE.Scene();
-
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-    camera.position.z = 50;
-
-    const particlesCount = 150;
-    const geometry = new THREE.BufferGeometry();
-    const positions = new Float32Array(particlesCount * 3);
-    const velocities = new Float32Array(particlesCount * 3);
-
-    for(let i=0; i < particlesCount; i++) {
-      positions[i*3] = (Math.random() - 0.5) * 100;
-      positions[i*3 + 1] = (Math.random() - 0.5) * 100;
-      positions[i*3 + 2] = (Math.random() - 0.5) * 100;
-      velocities[i*3] = (Math.random() - 0.5) * 0.02;
-      velocities[i*3 + 1] = (Math.random() - 0.5) * 0.02;
-      velocities[i*3 + 2] = (Math.random() - 0.5) * 0.02;
-    }
-
-    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-
-    const material = new THREE.PointsMaterial({
-      color: 0x3bd1ff,
-      size: 0.8,
-      opacity: 0.6,
-      transparent: true,
-    });
-
-    const points = new THREE.Points(geometry, material);
-    scene.add(points);
-
-    // Lines connecting close particles
-    const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0x3bd1ff,
-      opacity: 0.2,
-      transparent: true,
-    });
-
-    const maxDistance = 15;
-    const lineSegments = new THREE.Group();
-    scene.add(lineSegments);
-
-    function updateLines() {
-      lineSegments.clear();
-
-      for(let i=0; i < particlesCount; i++) {
-        for(let j=i+1; j < particlesCount; j++) {
-          const dx = positions[i*3] - positions[j*3];
-          const dy = positions[i*3+1] - positions[j*3+1];
-          const dz = positions[i*3+2] - positions[j*3+2];
-          const dist = Math.sqrt(dx*dx + dy*dy + dz*dz);
-          if(dist < maxDistance) {
-            const pointsLine = [];
-            pointsLine.push(new THREE.Vector3(positions[i*3], positions[i*3+1], positions[i*3+2]));
-            pointsLine.push(new THREE.Vector3(positions[j*3], positions[j*3+1], positions[j*3+2]));
-            const lineGeom = new THREE.BufferGeometry().setFromPoints(pointsLine);
-            const line = new THREE.Line(lineGeom, lineMaterial);
-            lineSegments.add(line);
-          }
-        }
-      }
-    }
-
-    function animate() {
-      requestAnimationFrame(animate);
-
-      for(let i=0; i < particlesCount; i++) {
-        positions[i*3] += velocities[i*3];
-        positions[i*3+1] += velocities[i*3+1];
-        positions[i*3+2] += velocities[i*3+2];
-
-        if(positions[i*3] > 50 || positions[i*3] < -50) velocities[i*3] *= -1;
-        if(positions[i*3+1] > 50 || positions[i*3+1] < -50) velocities[i*3+1] *= -1;
-        if(positions[i*3+2] > 50 || positions[i*3+2] < -50) velocities[i*3+2] *= -1;
-      }
-
-      geometry.attributes.position.needsUpdate = true;
-      updateLines();
-
-      renderer.render(scene, camera);
-    }
-
-    animate();
-
-    // Handle window resize
-    window.addEventListener('resize', () => {
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-    });
-
   </script>
 </body>
 </html>
