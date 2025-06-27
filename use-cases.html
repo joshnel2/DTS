@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Use Cases | DTS</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 </head>
-<body class="bg-gray-950 text-white font-sans">
-  <header class="bg-black border-b border-gray-800 fixed top-0 left-0 right-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+<body class="bg-gray-950 text-white font-sans overflow-x-hidden">
+
+  <header class="fixed top-0 w-full bg-gray-900 bg-opacity-80 z-50 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-indigo-400">DTS</h1>
-      <nav class="space-x-4 text-sm">
-        <a href="index.html" class="hover:text-indigo-400">Home</a>
-        <a href="services.html" class="hover:text-indigo-400">Services</a>
-        <a href="technology.html" class="hover:text-indigo-400">Technology</a>
-        <a href="use-cases.html" class="hover:text-indigo-400">Use Cases</a>
-        <a href="about.html" class="hover:text-indigo-400">About</a>
-        <a href="contact.html" class="hover:text-indigo-400">Contact</a>
+      <nav class="space-x-6 text-sm">
+        <a href="index.html" class="hover:text-indigo-300">Home</a>
+        <a href="services.html" class="hover:text-indigo-300">Services</a>
+        <a href="technology.html" class="hover:text-indigo-300">Technology</a>
+        <a href="use-cases.html" class="hover:text-indigo-300">Use Cases</a>
+        <a href="about.html" class="hover:text-indigo-300">About</a>
+        <a href="contact.html" class="hover:text-indigo-300">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="pt-28 px-6 max-w-5xl mx-auto text-gray-300">
-    <h2 class="text-4xl font-bold mb-8 text-white">Industries We Serve</h2>
-    <ul class="space-y-6">
-      <li><strong>🏥 Healthcare:</strong> Keep patient records AI-accessible but HIPAA-safe. Use GPT-style diagnostics with full privacy.</li>
-      <li><strong>📈 Finance:</strong> Generate real-time reports or automate compliance workflows without data leaving your firewall.</li>
-      <li><strong>⚖️ Legal:</strong> Summarize contracts or court transcripts privately — your clients never touch the cloud.</li>
-      <li><strong>🚀 Startups:</strong> Ship AI products without giving away your idea or risking lock-in with Big Tech APIs.</li>
-    </ul>
+    <h2 class="text-4xl font-semibold text-white mb-10 text-center" data-aos="fade-down">Industries We Empower</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div data-aos="fade-right" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-indigo-400 mb-2">🏥 Healthcare</h3>
+        <p>HIPAA-compliant AI diagnostics and secure patient interaction — privacy-first every time.</p>
+      </div>
+      <div data-aos="fade-left" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-indigo-400 mb-2">📈 Finance</h3>
+        <p>Real-time report generation while your data stays inside your firewall. Full privacy assured.</p>
+      </div>
+      <div data-aos="fade-right" data-aos-delay="200" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-indigo-400 mb-2">⚖️ Legal</h3>
+        <p>Contract analysis and transcript summarization without exposing sensitive documents.</p>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="200" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-indigo-400 mb-2">🚀 Startups</h3>
+        <p>Ship privacy-first AI products with confidence — no vendor lock-in, no leak risk.</p>
+      </div>
+    </div>
   </main>
 
-  <footer class="bg-black border-t border-gray-800 py-6 text-center text-sm text-gray-500 mt-16">
+  <footer class="py-8 text-center text-sm text-gray-500 bg-gray-900 bg-opacity-80 mt-12">
     &copy; 2025 DTS. All rights reserved.
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script>
 </body>
 </html>
