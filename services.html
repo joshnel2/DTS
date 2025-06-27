@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Services | DTS</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 </head>
-<body class="bg-gray-950 text-white font-sans">
-  <!-- Header -->
-  <header class="bg-black border-b border-gray-800 fixed top-0 left-0 right-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+<body class="bg-gray-950 text-white font-sans overflow-x-hidden">
+
+  <header class="fixed top-0 w-full bg-gray-900 bg-opacity-80 z-50 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-indigo-400">DTS</h1>
-      <nav class="space-x-4 text-sm">
-        <a href="index.html" class="hover:text-indigo-400">Home</a>
-        <a href="services.html" class="hover:text-indigo-400">Services</a>
-        <a href="technology.html" class="hover:text-indigo-400">Technology</a>
-        <a href="use-cases.html" class="hover:text-indigo-400">Use Cases</a>
-        <a href="about.html" class="hover:text-indigo-400">About</a>
-        <a href="contact.html" class="hover:text-indigo-400">Contact</a>
+      <nav class="space-x-6 text-sm">
+        <a href="index.html" class="hover:text-indigo-300">Home</a>
+        <a href="services.html" class="hover:text-indigo-300">Services</a>
+        <a href="technology.html" class="hover:text-indigo-300">Technology</a>
+        <a href="use-cases.html" class="hover:text-indigo-300">Use Cases</a>
+        <a href="about.html" class="hover:text-indigo-300">About</a>
+        <a href="contact.html" class="hover:text-indigo-300">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main -->
   <main class="pt-28 px-6 max-w-6xl mx-auto text-gray-300">
-    <h2 class="text-4xl font-bold mb-10 text-white">Our Services</h2>
-    <div class="grid md:grid-cols-2 gap-10">
-      <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition">
-        <h3 class="text-2xl font-semibold text-indigo-400 mb-2">🛡️ API Proxy Shield</h3>
-        <p>Mask your use of external LLMs by routing calls through our encrypted relay system.</p>
+    <h2 class="text-4xl font-semibold text-white mb-12 text-center" data-aos="fade-down">Our Services</h2>
+    <div class="space-y-16">
+      <div data-aos="fade-right" class="flex flex-col md:flex-row items-start md:items-center">
+        <div class="md:w-1/2 p-6 bg-gray-800 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-bold text-indigo-400 mb-3">🔒 Encrypted API Relay</h3>
+          <p>Obfuscate your AI endpoints, control metadata, prevent reverse-engineering of your infrastructure.</p>
+        </div>
+        <div class="md:w-1/2 p-6">
+          <img src="https://via.placeholder.com/500x300" alt="Proxy Visual" class="rounded-lg shadow-md"/>
+        </div>
       </div>
-      <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition">
-        <h3 class="text-2xl font-semibold text-indigo-400 mb-2">🔐 Private Data Vaults</h3>
-        <p>We deploy self-hosted LLMs on secure containers — with zero outbound data.</p>
+      <div data-aos="fade-left" class="flex flex-col md:flex-row-reverse items-start md:items-center">
+        <div class="md:w-1/2 p-6 bg-gray-800 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-bold text-indigo-400 mb-3">🛡️ Self-hosted LLM Vaults</h3>
+          <p>Deploy open-source models inside secure VMs — your data never leaves your network.</p>
+        </div>
+        <div class="md:w-1/2 p-6">
+          <img src="https://via.placeholder.com/500x300" alt="Vault Visual" class="rounded-lg shadow-md"/>
+        </div>
       </div>
-      <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition">
-        <h3 class="text-2xl font-semibold text-indigo-400 mb-2">🧠 Local LLM Hosting</h3>
-        <p>Run open-source models on your own infrastructure with our deployment scripts.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition">
-        <h3 class="text-2xl font-semibold text-indigo-400 mb-2">⚙️ AI App Integrations</h3>
-        <p>We help SaaS companies add AI to their apps — without giving away their roadmap.</p>
+      <div data-aos="fade-right" class="flex flex-col md:flex-row items-start md:items-center">
+        <div class="md:w-1/2 p-6 bg-gray-800 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-bold text-indigo-400 mb-3">📦 Seamless App Integration</h3>
+          <p>Embed AI into your SaaS with total privacy — keep IP, logic, and processes secure.</p>
+        </div>
+        <div class="md:w-1/2 p-6">
+          <img src="https://via.placeholder.com/500x300" alt="App Integration Visual" class="rounded-lg shadow-md"/>
+        </div>
       </div>
     </div>
   </main>
 
-  <footer class="bg-black border-t border-gray-800 py-6 text-center text-sm text-gray-500 mt-16">
+  <footer class="py-8 text-center text-sm text-gray-500 bg-gray-900 bg-opacity-80 mt-12">
     &copy; 2025 DTS. All rights reserved.
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script>
 </body>
 </html>
