@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>About | DTS</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 </head>
-<body class="bg-gray-950 text-white font-sans">
-  <header class="bg-black border-b border-gray-800 fixed top-0 left-0 right-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+<body class="bg-gray-950 text-white font-sans overflow-x-hidden">
+
+  <header class="fixed top-0 w-full bg-gray-900 bg-opacity-80 z-50 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-indigo-400">DTS</h1>
-      <nav class="space-x-4 text-sm">
-        <a href="index.html" class="hover:text-indigo-400">Home</a>
-        <a href="services.html" class="hover:text-indigo-400">Services</a>
-        <a href="technology.html" class="hover:text-indigo-400">Technology</a>
-        <a href="use-cases.html" class="hover:text-indigo-400">Use Cases</a>
-        <a href="about.html" class="hover:text-indigo-400">About</a>
-        <a href="contact.html" class="hover:text-indigo-400">Contact</a>
+      <nav class="space-x-6 text-sm">
+        <a href="index.html" class="hover:text-indigo-300">Home</a>
+        <a href="services.html" class="hover:text-indigo-300">Services</a>
+        <a href="technology.html" class="hover:text-indigo-300">Technology</a>
+        <a href="use-cases.html" class="hover:text-indigo-300">Use Cases</a>
+        <a href="about.html" class="hover:text-indigo-300">About</a>
+        <a href="contact.html" class="hover:text-indigo-300">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="pt-28 px-6 max-w-3xl mx-auto text-gray-300">
-    <h2 class="text-4xl font-bold mb-8 text-white text-center">Who We Are</h2>
-    <p class="mb-6 text-lg text-center">
-      DTS is a collective of technologists, privacy engineers, and decentralization advocates. Our mission is to protect your business’s edge by giving you full control over how, where, and why you use AI.
+  <main class="pt-28 px-6 max-w-4xl mx-auto text-gray-300">
+    <h2 class="text-4xl font-semibold text-white mb-6 text-center" data-aos="fade-down">Who We Are</h2>
+    <p class="text-lg mb-6" data-aos="fade-up">
+      DTS is a collective of technologists, privacy engineers, and decentralization advocates. We empower businesses to adopt AI without exposing their secrets.
     </p>
-    <p class="text-center">
-      We don’t believe in surrendering your infrastructure to Big Cloud. You should own your stack — and your future.
+    <p class="text-lg mb-6" data-aos="fade-up" data-aos-delay="200">
+      Founded by experts in security and scalable infrastructure, we put you in control — so AI serves your mission, not the other way around.
+    </p>
+    <p class="text-lg" data-aos="fade-up" data-aos-delay="400">
+      Integrity, transparency, and privacy-first innovation: that's the DTS promise.
     </p>
   </main>
 
-  <footer class="bg-black border-t border-gray-800 py-6 text-center text-sm text-gray-500 mt-16">
+  <footer class="py-8 text-center text-sm text-gray-500 bg-gray-900 bg-opacity-80 mt-12">
     &copy; 2025 DTS. All rights reserved.
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script>
 </body>
 </html>
