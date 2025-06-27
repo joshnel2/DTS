@@ -6,12 +6,12 @@
   <title>Services | DTS</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <!-- header/nav same as index.html -->
-  <header class="bg-black border-b border-gray-800">
+<body class="bg-gray-950 text-white font-sans">
+  <!-- Header -->
+  <header class="bg-black border-b border-gray-800 fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Decentralized Technology Services</h1>
-      <nav class="space-x-4">
+      <h1 class="text-2xl font-bold text-indigo-400">DTS</h1>
+      <nav class="space-x-4 text-sm">
         <a href="index.html" class="hover:text-indigo-400">Home</a>
         <a href="services.html" class="hover:text-indigo-400">Services</a>
         <a href="technology.html" class="hover:text-indigo-400">Technology</a>
@@ -22,17 +22,30 @@
     </div>
   </header>
 
-  <main class="py-20 px-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6">Our Services</h2>
-    <ul class="space-y-6 text-gray-300">
-      <li><strong>🔒 AI API Obfuscation:</strong> Mask your use of services like OpenAI and Claude to protect client confidence and business secrets.</li>
-      <li><strong>🛡️ Data Privacy Routing:</strong> Route requests through encrypted tunnels that anonymize data origin and metadata.</li>
-      <li><strong>📦 Private AI Hosting:</strong> We host open-source models on secure infrastructure so your data never leaves your ecosystem.</li>
-      <li><strong>🤖 Custom AI Deployment:</strong> Integrate tailored LLMs into your business logic securely with full control.</li>
-    </ul>
+  <!-- Main -->
+  <main class="pt-28 px-6 max-w-6xl mx-auto text-gray-300">
+    <h2 class="text-4xl font-bold mb-10 text-white">Our Services</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold text-indigo-400 mb-2">🛡️ API Proxy Shield</h3>
+        <p>Mask your use of external LLMs by routing calls through our encrypted relay system.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold text-indigo-400 mb-2">🔐 Private Data Vaults</h3>
+        <p>We deploy self-hosted LLMs on secure containers — with zero outbound data.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold text-indigo-400 mb-2">🧠 Local LLM Hosting</h3>
+        <p>Run open-source models on your own infrastructure with our deployment scripts.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold text-indigo-400 mb-2">⚙️ AI App Integrations</h3>
+        <p>We help SaaS companies add AI to their apps — without giving away their roadmap.</p>
+      </div>
+    </div>
   </main>
 
-  <footer class="bg-black border-t border-gray-800 py-6 text-center text-sm text-gray-500">
+  <footer class="bg-black border-t border-gray-800 py-6 text-center text-sm text-gray-500 mt-16">
     &copy; 2025 DTS. All rights reserved.
   </footer>
 </body>
