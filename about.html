@@ -1,46 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>About | DTS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>About | Decentralized Technology Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-  <style>body{font-family:'Orbitron',sans-serif;}</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.12.0/cdn.min.js" defer></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #0f172a, #030615);
+      color: #e0e7ff;
+    }
+    h1, h2, h3, h4 {
+      color: #60a5fa;
+      font-weight: 700;
+    }
+    p {
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+    a {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+    a:hover {
+      color: #22d3ee;
+    }
+  </style>
 </head>
-<body class="bg-gray-950 text-white overflow-x-hidden">
+<body>
 
-  <header class="fixed w-full bg-gray-900 bg-opacity-80 backdrop-blur z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-indigo-400">DTS</h1>
-      <nav class="space-x-6 text-sm">
-        <a href="index.html" class="hover:text-indigo-300">Home</a>
-        <a href="services.html" class="hover:text-indigo-300">Services</a>
-        <a href="technology.html" class="hover:text-indigo-300">Technology</a>
-        <a href="use-cases.html" class="hover:text-indigo-300">Use Cases</a>
-        <a href="about.html" class="hover:text-indigo-300">About</a>
-        <a href="contact.html" class="hover:text-indigo-300">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-400">DTS</h1>
+    <nav class="space-x-6 text-sm font-semibold">
+      <a href="index.html" class="hover:text-cyan-400">Home</a>
+      <a href="services.html" class="hover:text-cyan-400">Services</a>
+      <a href="technology.html" class="hover:text-cyan-400">Technology</a>
+      <a href="use-cases.html" class="hover:text-cyan-400">Use Cases</a>
+      <a href="about.html" class="hover:text-cyan-400">About</a>
+      <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="pt-28 px-6 max-w-4xl mx-auto text-gray-300">
-    <h2 class="text-4xl font-semibold text-white mb-8 text-center" data-aos="fade-down">Our Mission & Vision</h2>
-    <p class="text-lg mb-6" data-aos="fade-up">
-      At DTS, we believe in a world where AI empowers organizations—not exploits them. Our mission is to enable private, scalable, and resilient AI deployment for businesses that demand sovereignty over their data and strategy.
-    </p>
-    <p class="text-lg mb-6" data-aos="fade-up" data-aos-delay="200">
-      Founded by specialists in cybersecurity, decentralization, and machine learning, we built this company to bridge the gap between innovation and ownership. We exist so your AI is yours—and no one else's.
-    </p>
-    <p class="text-lg" data-aos="fade-up" data-aos-delay="400">
-      Our vision: a future where intelligent systems integrate seamlessly into enterprise workflows—with no compromises on trust, control, or compliance.
-    </p>
-  </main>
+<main class="pt-24 max-w-4xl mx-auto px-6 pb-24">
+  <h2 class="text-4xl font-extrabold mb-8 text-blue-400 text-center" data-aos="fade-up">
+    About Decentralized Technology Services
+  </h2>
+  <p class="mb-6 text-lg" data-aos="fade-up" data-aos-delay="100">
+    At DTS, our mission is to empower businesses and individuals with AI-powered tools that respect privacy, security, and autonomy.
+    We combine cutting-edge decentralized technologies with open-source AI to create solutions that put control back in your hands.
+  </p>
+  <p class="mb-6 text-lg" data-aos="fade-up" data-aos-delay="200">
+    Founded by industry veterans and privacy advocates, DTS operates at the intersection of innovation and ethics.
+    Our team is passionate about building infrastructure that enables AI to thrive without sacrificing your data sovereignty.
+  </p>
+  <p class="mb-6 text-lg" data-aos="fade-up" data-aos-delay="300">
+    Whether you're a startup, enterprise, or government entity, DTS offers tailored solutions that adapt to your needs.
+    Partner with us to future-proof your AI deployments with trust and transparency.
+  </p>
 
-  <footer class="py-8 text-center text-sm text-gray-500 bg-gray-900 bg-opacity-80 mt-12">
-    &copy; 2025 DTS. Privacy by design, autonomy by default.
-  </footer>
+  <div class="text-center mt-12" data-aos="zoom-in">
+    <a href="contact.html" class="btn-primary inline-block">Connect with Our Team</a>
+  </div>
+</main>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script>
+<footer class="py-8 text-center text-sm text-slate-400 bg-gray-900 bg-opacity-90 mt-24">
+  &copy; 2025 Decentralized Technology Services. All rights reserved.<br/>
+  <span class="text-cyan-400">Securing autonomy in the age of AI.</span>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
 </body>
 </html>
